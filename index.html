@@ -43,10 +43,7 @@
 					</section>
 
 				<!-- Main -->
-					<div id="main">
-<audio controls autoplay>
-  <source src="assets/MFDOOM.wav" type="audio/wav">
-</audio>
+
 
 						<!-- One -->
 							<section id="one" class="tiles">
@@ -84,18 +81,36 @@
 							</section>
 
 						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>Ay Carumba</h2>
-									</header>
-									<ul class="actions">
-										<li><a href="assets/resume.pdf" class="button next">Now That's my Number</a></li>
-									</ul>
-								</div>
-							</section>
+					<section id="two">
+                      <div class="inner">
+                        <header class="major">
+                          <h2>Ay Carumba</h2>
+                        </header>
+                        <ul class="actions">
+                          <li>
+                            <button type="button" class="button next" onclick="playAudio();">
+                              Now That's my Number
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
 
-					</div>
+                    <audio id="wavPlayer" src="assets/MFDOOM.wav"></audio>
+
+                    <script>
+                      function playAudio() {
+                        var audio = document.getElementById('wavPlayer');
+                        // Toggle play/pause for the audio file
+                        if (audio.paused) {
+                          audio.play();
+                        } else {
+                          audio.pause();
+                        }
+                      }
+                    </script>
+
+
 
 				<!-- Contact -->
 
